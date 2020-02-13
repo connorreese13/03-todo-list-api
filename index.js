@@ -1,7 +1,11 @@
-const express = require('express')
-const cors = require('cors')
+const express = require("express");
+const cors = require("cors");
 
-const app = express()
-app.use(cors())
+const app = express();
+app.use(cors());
 
-app.listen(4000)
+require("./db.js");
+
+//middleware
+
+app.listen(4000, () => console.log("Ready on port 4000"));
