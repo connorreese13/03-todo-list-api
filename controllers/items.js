@@ -14,4 +14,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.patch("/:id", (req, res) => {
+  db_items
+    .findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then(response => {
+      res.send(response);
+    });
+});
+
 module.exports = router;
