@@ -8,4 +8,10 @@ router.post("/", (req, res) => {
   });
 });
 
+router.get("/", (req, res) => {
+  db_items.find(req.body).then(response => {
+    res.send(response);
+  });
+});
+
 module.exports = router;
