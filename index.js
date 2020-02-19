@@ -15,4 +15,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/items", require("./controllers/items.js"));
 
-app.listen(port, () => console.log("Ready on port 4000"));
+app.listen(port, () => console.log(`Ready on port ${process.env.PORT}`));
