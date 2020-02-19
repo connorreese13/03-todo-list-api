@@ -23,7 +23,7 @@ router.patch("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  db_items.findByIdAndDelete(req.params.id, req.body).then(response => {
+  db_items.findByIdAndDelete(req.params.id).then(response => {
     res.send(response);
   });
 });
