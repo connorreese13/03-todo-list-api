@@ -9,7 +9,7 @@ router.post("/", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  db_items.find(req.body).then(response => {
+  db_items.find({}).then(response => {
     res.send(response);
   });
 });

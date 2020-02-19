@@ -7,7 +7,7 @@ let Items = mongoose.model("items", {
   },
   done: {
     type: Boolean,
-    default: true
+    default: false
   }
 });
 
